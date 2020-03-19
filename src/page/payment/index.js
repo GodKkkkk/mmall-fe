@@ -40,7 +40,7 @@ var page = {
         var _this = this;
         this.paymentTimer = window.setInterval(function () {
             _payment.getPaymentStatus(_this.orderNumber,function (res) {
-                if(res == true){
+                if(res.success == true){
                     window.location.href
                         = './result.html?type=payment&orderNumber=' + _this.data.orderNumber;
                 }
