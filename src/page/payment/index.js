@@ -40,17 +40,7 @@ var page = {
         var _this = this;
         this.paymentTimer = window.setInterval(function () {
             _payment.getPaymentStatus(_this.orderNumber,function (res) {
-				var keys = [];
-				for(var key in res) {
-					keys.push(key);
-				}
-				keys = keys.sort();
-
-				for(var i = 0; i < keys.length; i++) {
-					var key = keys1[i];
-					console.log(key + "---" + res[key]);
-				}
-				console.log("---------------------------------------");
+				console.log(res);
                 if(res == true){
                     window.location.href
                         = './result.html?type=payment&orderNumber=' + _this.data.orderNumber;
