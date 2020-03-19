@@ -14,7 +14,10 @@ var getHtmlConfig = function(name, title) {
 		inject: true, //所有的 javascript 资源将被放置到 body 元素的底部，'head' 将放置到 head 元素中
 		hash: true, //将添加一个唯一的 webpack 编译 hash 到所有包含的脚本和 CSS 文件
 		chunks: ['common', name], //允许只添加某些块
-		minify: { removeAttributeQuotes: false }
+		minify: { 
+			minimize:true,
+			removeAttributeQuotes:false 
+		}
 	};
 };
 
