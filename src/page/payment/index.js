@@ -40,8 +40,10 @@ var page = {
         var _this = this;
         this.paymentTimer = window.setInterval(function () {
             _payment.getPaymentStatus(_this.orderNumber,function (res) {
+				console.log(res.status);
+				console.log(res.msg);
+				console.log(res.data);
 				console.log(res.success);
-				console.log(res);
                 if(res.success == true){
                     window.location.href
                         = './result.html?type=payment&orderNumber=' + _this.data.orderNumber;
