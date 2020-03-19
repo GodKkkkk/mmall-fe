@@ -13,11 +13,7 @@ var getHtmlConfig = function(name, title) {
 		title: title, //用来生成页面的 title 元素
 		inject: true, //所有的 javascript 资源将被放置到 body 元素的底部，'head' 将放置到 head 元素中
 		hash: true, //将添加一个唯一的 webpack 编译 hash 到所有包含的脚本和 CSS 文件
-		chunks: ['common', name], //允许只添加某些块
-		minify: { 
-			minimize:true,
-			removeAttributeQuotes:false 
-		}
+		chunks: ['common', name] //允许只添加某些块
 	};
 };
 
@@ -66,7 +62,13 @@ config = {
 			},
 			{
 				test: /\.string$/,
-				use: ["html-loader"]
+				loader: "html-loader",
+				query: {
+					// 需要压缩
+					  minimize : true,
+					  // 压缩的时候 不要删除引号
+					  removeAttributeQuotes : false
+				}
 			}
 		]
 	},
