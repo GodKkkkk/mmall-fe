@@ -44,6 +44,8 @@ var page = {
 				console.log(res.msg);
 				console.log(res.data);
 				console.log(res.success);
+				console.log(res);
+				console.log("---------------------------------------");
                 if(res.success == true){
                     window.location.href
                         = './result.html?type=payment&orderNumber=' + _this.data.orderNumber;
