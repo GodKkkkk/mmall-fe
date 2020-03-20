@@ -1,3 +1,16 @@
+/* notice */
+.notice-con {
+    background: #c60023;
+    padding: 5px 0;
+    line-height: 30px;
+}
+
+.notice-con .notice {
+    font-size: 14px;
+    color: #eee;
+    font-weight: 700;
+    text-align: center;
+}
 .nav{
     background: #eee;
     height: 30px;

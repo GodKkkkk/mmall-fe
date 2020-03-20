@@ -23,7 +23,7 @@ var navSide = {
 			},
 			{
 				name: 'about',
-				desc: '关于MMall',
+				desc: '关于KMall',
 				href: './about.html'
 			}
 		]
